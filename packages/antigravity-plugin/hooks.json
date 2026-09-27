@@ -1,0 +1,24 @@
+{
+  "jev-context-compaction": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/record-evidence.mjs",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "node scripts/recall-evidence.mjs",
+        "timeout": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+<!-- jev-agent:global-routing-v1 -->
+For meaningful choices between two or more available tools, models, or subagents, read `${HOME}\.claude\skills\jevrouter\SKILL.md` and run the live JevRouter procedure on the current task. Announce the routing step, report the decision and confidence, and use Claude Code's normal permission checks. If Jev fails or returns no decision, disclose that and continue with normal reasoning; setup checks are not task decisions.

@@ -1,0 +1,5 @@
+{
+  "name": "jevrouter",
+  "version": "0.1.0",
+  "description": "Decision-only Jev routing for Claude Code tools, models, and subagents."
+}

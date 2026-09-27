@@ -1,0 +1,23 @@
+{
+  "name": "jev-agent-hosts",
+  "version": "0.1.0",
+  "description": "Jev decision layer for coding agents: context compaction and capability routing for Claude Code, Codex, Pi, and Antigravity.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.ts packages/antigravity-plugin/tests/*.test.mjs",
+    "test:core": "node --experimental-strip-types --test tests/core.test.ts",
+    "test:pi": "node --experimental-strip-types --test tests/pi-adapter.test.ts",
+    "test:antigravity": "node --test packages/antigravity-plugin/tests/*.test.mjs tests/antigravity-plugin.test.ts",
+    "test:smoke": "node --experimental-strip-types --test tests/e2e-smoke.test.ts"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}
