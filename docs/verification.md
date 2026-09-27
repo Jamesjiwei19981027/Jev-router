@@ -27,7 +27,7 @@ This section mirrors the verification table in the README.
 
 - **Pi: real runtime compaction (RPC)**: **verified**. Jev was invoked, kept all tool calls, and Pi's native compaction ran.
 - **Pi: Jev drop/truncate on a real host**: **not yet observed**, because Jev has not chosen to drop or truncate in a live run. The path is covered by automated tests.
-- **Pi: TUI display of `/jev-compact-status`**: **manual check pending**.
+- **Pi: TUI display of `/jev-compact-status`**: **verified**. It was checked by hand in the interactive Pi TUI, and the output displays correctly.
 - **Antigravity: evidence recall hooks**: **verified on a real host**. This covers `PostToolUse` recording, `PreInvocation` injection, and credential redaction. Tool output capture, including `view_file`, was verified in a live conversation: 60 evidence records, 0 fallbacks. Antigravity writes a tool's transcript entry only after the hook returns, so each record's output is backfilled on the next hook invocation.
 - **Antigravity: router skill**: **loaded**. The skill is listed in the Antigravity Customizations panel. The routing call itself is only verified with synthetic inputs.
 - **Codex: compaction hooks**: verified only with a synthetic `PreCompact` / `SessionStart(compact)` round-trip.

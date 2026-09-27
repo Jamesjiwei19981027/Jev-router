@@ -178,7 +178,7 @@ npm run doctor
 | Pi：扩展加载 | ✅ 真实宿主 | 两个扩展都能通过 Pi RPC 的 `get_commands` 查到 |
 | Pi：真实压缩调用 Jev | ✅ 真实宿主 | 在一次 Pi RPC 会话中，Jev 被调用，保留了全部 8 个工具调用，随后执行了 Pi 原生压缩 |
 | Pi：真实宿主上 Jev 删除/截断 | ⏳ 尚未观察到 | 真实运行中 Jev 还没有选择过删除或截断；这条路径由自动化测试覆盖 |
-| Pi：TUI 中 `/jev-compact-status` 的显示 | ⏳ 待人工检查 | |
+| Pi：TUI 中 `/jev-compact-status` 的显示 | ✅ 真实宿主 | 在 Pi 交互界面中人工确认显示正常 |
 | Antigravity：证据召回 | ✅ 真实宿主 | 真实对话中捕获了 60 条证据（0 条兜底文本），召回成功注入，凭证已脱敏 |
 | Antigravity：路由技能 | 🟡 已加载 | 已出现在 Antigravity 的 Customizations 面板中；路由调用只用合成输入验证过 |
 | Codex：压缩 hooks | 🟡 合成输入 | 用合成的 `PreCompact` / `SessionStart(compact)` 跑通了完整流程；还没有执行过真实的 `/compact` |

@@ -180,7 +180,7 @@ After deploying, fully restart Claude Code, Codex, and Pi. In Codex, open `/hook
 | Pi: extensions load | ✅ real host | Both extensions discovered by Pi RPC (`get_commands`) |
 | Pi: real compaction calls Jev | ✅ real host | Pi RPC session: Jev was invoked, kept all 8 tool calls, and Pi's native compaction ran |
 | Pi: Jev drop/truncate on a real host | ⏳ not yet observed | Jev has not chosen to drop or truncate in a live run yet; this path is covered by automated tests |
-| Pi: TUI display of `/jev-compact-status` | ⏳ manual check pending | |
+| Pi: TUI display of `/jev-compact-status` | ✅ real host | Checked by hand in the interactive Pi TUI; the output displays correctly |
 | Antigravity: evidence recall | ✅ real host | Live conversation: 60 evidence records captured (0 fallbacks), recall injected, credentials redacted |
 | Antigravity: router skill | 🟡 loaded | Listed in the Antigravity Customizations panel; routing verified only with synthetic inputs |
 | Codex: compaction hooks | 🟡 synthetic | Synthetic `PreCompact` / `SessionStart(compact)` round-trip; a real `/compact` has not been run |
